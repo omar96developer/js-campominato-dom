@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border: 1px solid;
+    padding: 0 20px;
+}
+/* main */
+.main_griglia {
+    border: 1px solid;
+    height: 600px;
+    padding: 50px ;
+    background-color: aqua;
+}
+.griglia {
+    margin:auto;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cella {
+    border: 1px solid;
+    width: 10%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .griglia .cella {
+    
+}
+.cella_100 {
+    border: 1px solid;
+    width: calc(500px / 10 * 1);
+    height: calc(500px / 10 * 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cella_81{
+    border: 1px solid;
+    width: calc(500px / 9 * 1);
+    height: calc(500px / 9 * 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cella_49{
+    border: 1px solid;
+    width: calc(500px / 7 * 1);
+    height: calc(500px / 7 * 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cella {
+    cursor: pointer;
+    background-color: aqua;
+}
+#cella:focus {
+    background-color: red;
+} */
