@@ -6,13 +6,15 @@
   
 
   btnstartgame.addEventListener('click', function(){
-    //utente sceglie livello 
+
     const level = selectdifficolta.value
     const totalcell = getcellnum(level)
    generategrid(totalcell);
 
   })
-  
+
+  const numcells = 81; //livello medio 
+  generanumeribombe(16, numcells)
   function getcellnum(level){
       switch (parseInt(level)) {
         case 1:
@@ -35,8 +37,7 @@
       const cellsize = 100 / perrowcels
 
     for (let i = 0; i < cellsnumber; i++) {
-            //gnero una cella
-        //const cell = `<div class='cella' style='width: ${cellsize}%; height: ${cellsize}%;'></div>`;
+        
         const cell = document.createElement("div");
         cell.classList.add("cella");
         cell.style.width = cellsize + "%";
@@ -45,7 +46,6 @@
         cell.textContent = i + 1
         
 
-        //boarcontainer.innerHTML += cell;
         boarcontainer.append(cell)
     }   
 
@@ -53,4 +53,43 @@
 
   function onsingleclick () {
       this.style.backgroundColor = 'red'
-  }
+  }                       
+  
+  function generanumeribombe(numbombe, nummaxrandom){
+      const arraybombe = [];
+
+      for (let i = 0; i < 16; i++){
+          const nuovabomba = generaterandomnumber(1, nummaxrandom);
+       
+          let numeroesiste = arraybombe.includes(nuovabomba);
+          //arraybombe.indexOf(nuovabomba)
+          /* for (let j = 0; j < arraybombe.length; j++) {
+              const bombaesistente = arraybombe[j];
+              if(bombaesistente === nuovabomba){
+                  numeroesiste = true
+              }
+              
+          } */
+          if(!numeroesiste){
+            arraybombe.push(nuovabomba)
+          } else {
+            i--;
+          }
+          
+        }
+       
+    }
+    
+    
+    function generaterandomnumber(minnumber = 1, maxnumber = 10){
+
+    const numrandom = Math.floor(Math.random() * (maxnumber - minnumber + 1) + minnumber);
+    return numrandom
+    }
+
+
+function orderarray (){
+    const arrayordinato = arraybombe.sort( (a, b) => a - b);
+    return arrayordinato
+    
+}
