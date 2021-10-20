@@ -55,12 +55,14 @@
   function onsingleclick () {
       
       const numcellacorrente = parseInt(this.textContent)
-      
+
       if(bombe.includes(numcellacorrente)){
         this.style.backgroundColor = 'red'
+        alert('You lose')
       } else{
         this.style.backgroundColor = 'green'
       }
+      return
   }                       
   
 
