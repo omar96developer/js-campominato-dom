@@ -59,6 +59,7 @@
       if(bombe.includes(numcellacorrente)){
         this.style.backgroundColor = 'red'
         alert('You lose')
+        window.location.reload(false)
       } else{
         this.style.backgroundColor = 'green'
       }
