@@ -17,7 +17,7 @@
     border: 1px solid;
     height: 600px;
     padding: 50px ;
-    background-color: aqua;
+    background-color: #F2B79F;
 }
 .griglia {
     margin:auto;
@@ -33,7 +33,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: yellow;
+    background-color: #E5B769;
 }
 
 /* .griglia .cella {
